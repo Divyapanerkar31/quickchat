@@ -48,7 +48,7 @@ function Signup() {
     <>
         <div className="lgn_container">
             
-            <img src="/3.png" width="260" style={{borderRadius:'12px'}}/>
+            <img src="/3.png" width="210" style={{borderRadius:'12px'}}/>
            
             <div className='login_form'>
                 <h1>Sign up</h1>
