@@ -1,0 +1,133 @@
+/* Main Container */
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1200px; /* 3D perspective for child elements */
+  overflow: hidden; /* Prevents overflow */
+  position: relative;
+  animation: fadeIn 1s ease-out;
+  transition: background-color 0.5s ease-in-out; /* Quick transition for background color */
+}
+
+/* 3D Glassmorphism Container */
+.glass-container {
+  width: 90%;
+  max-width: 500px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.15); /* Frosted glass effect */
+  border-radius: 20px;
+  backdrop-filter: blur(20px); /* Frosted glass blur */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3); /* Deep shadow for 3D depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: 20px;
+  transform-style: preserve-3d; /* Enable 3D transformation */
+  animation: rotateIn 1.5s ease-out; /* 3D rotation animation */
+  transition: transform 0.4s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Title Styles */
+.title {
+  font-size: 36px;
+  color: #090101;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  animation: fadeInUp 1.5s ease-out; /* Fade-in and slide-up effect */
+}
+
+/* Description Styles */
+.description {
+  font-size: 18px;
+  color: #060000;
+  font-weight: 500;
+  opacity: 0.85;
+  animation: fadeInUp 2s ease-out; /* Fade-in and slide-up effect */
+}
+
+/* Button Styles */
+.continue-btn {
+  padding: 15px 30px;
+  background-color: #0c0100; /* Soft red color */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.continue-btn:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Darker shadow for depth */
+}
+
+/* Keyframe Animations */
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* 3D Rotate effect for the glass container */
+@keyframes rotateIn {
+  0% {
+    transform: rotateX(100deg) rotateY(100deg) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Fade-in and slide-up effect for the text */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect to create a 3D rotation */
+.glass-container:hover {
+  transform: rotateX(10deg) rotateY(10deg); /* Tilt the glass container slightly */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .glass-container {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .continue-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+}

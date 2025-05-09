@@ -1,0 +1,111 @@
+/* ====== Keyframes ====== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradientMotion {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ====== Container ====== */
+.lgn_container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, #ffecd2, #fcb69f, #fad0c4, #ffd5ec);
+  background-size: 300% 300%;
+  animation: gradientMotion 20s ease infinite;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ====== Login Form ====== */
+.login_form {
+  background: rgba(19, 1, 1, 0.12);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 25px;
+  width: 90%;
+  max-width: 340px;
+
+  animation: fadeInUp 1s ease-out;
+}
+
+/* ====== Labels & Inputs ====== */
+#lbl {
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c2c2c;
+  margin-bottom: 5px;
+}
+
+#inp {
+  height: 40px;
+  padding: 0 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.6);
+  transition: 0.2s ease;
+}
+
+#inp:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0 2px #ffb6b9;
+}
+
+/* ====== Button ====== */
+#login_btn {
+  height: 45px;
+  border: none;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#login_btn:hover {
+  transform: scale(1.03);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* ====== Link Styling ====== */
+a {
+  color: #222;
+  font-size: 14px;
+  text-decoration: none;
+  margin-top: 10px;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #ff7e89;
+}

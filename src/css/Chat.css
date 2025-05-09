@@ -1,0 +1,162 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  backdrop-filter: blur(10px); 
+  overflow: hidden;
+}
+
+
+.chat-phone-frame {
+  width: 600%;
+  max-width: 420px; 
+  height: 85vh; 
+  border-radius: 40px;
+  padding: 20px;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgb(0, 0, 0); /* Soft shadow for 3D effect */
+  overflow: hidden;
+  position: relative;
+  margin: 0 20px; /* Add left and right margin for spacing */
+  background: rgba(255, 255, 255, 0.1); /* Transparent background for glass effect */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Light border to enhance glass effect */
+  animation: fadeIn 1s ease-in-out; /* Animation for phone frame */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(50px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.chat-container {
+  flex: 1;
+  border-radius: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #230404;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent; /* Transparent background */
+}
+
+.chat-header {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* subtle text shadow for effect */
+}
+
+.phone-icon {
+  color: #010a06;
+  font-size: 26px;
+}
+
+.chats {
+  flex: 1;
+  padding: 15px;
+  border-radius: 20px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: transparent; /* No background */
+  scroll-behavior: smooth;
+  animation: slideUp 0.5s ease-out; /* Animation for chat container */
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.chats div {
+  padding: 12px 18px;
+  border-radius: 20px;
+  max-width: 80%;
+  font-size: 16px;
+  color: #333;
+  transition: background-color 0.3s ease;
+  background-color: transparent; /* No background */
+}
+
+.chats div[style*='text-align: right'] {
+  align-self: flex-end;
+  background-color: transparent;
+  color: #032012; /* Green color for the user */
+}
+
+.chats div[style*='text-align: left'] {
+  align-self: flex-start;
+  background-color: transparent;
+  color: #333;
+}
+
+/* Form styling for input box and send button */
+form {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+form input {
+  flex: 1;
+  height: 45px;
+  font-size: 16px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 30px;
+  color: #333;
+  outline: none;
+  border: 1px solid #110303;
+  background: rgba(0, 0, 0, 0.4); /* Slight transparency for the input */
+  backdrop-filter: blur(5px); /* Frosted glass effect on input */
+}
+
+form input::placeholder {
+  color: #1d0101;
+}
+
+form button {
+  height: 45px;
+  padding: 0 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background-color: #0b0103;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: buttonHover 0.3s ease-in-out; /* Animation for button hover */
+}
+
+form button:hover {
+  background-color: #ff4b2b;
+}
+
+@keyframes buttonHover {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+/* Scrollbar customization */
+.chats::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chats::-webkit-scrollbar-thumb {
+  background-color: rgba(31, 2, 2, 0.1);
+  border-radius: 10px;
+}

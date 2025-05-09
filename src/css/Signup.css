@@ -1,0 +1,49 @@
+.lgn_container{
+    width: 100vw;
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#lbl{
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    float: left;
+}
+
+#inp{
+    height: 35px;
+    float: right;
+    width: 240px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+#login_btn{
+    height: 40px;
+    width: fit-content;
+    border: none;
+    background-color: rgb(20, 2, 2);
+    color:white;
+    padding: 8px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 22px;
+}
