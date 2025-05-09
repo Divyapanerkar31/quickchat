@@ -48,10 +48,10 @@ function Signup() {
     <>
         <div className="lgn_container">
             
-            <img src="/3.png" width="210" style={{borderRadius:'12px'}}/>
+            <img src="/3.png" width="180px" style={{borderRadius:'12px'}}/>
            
             <div className='login_form'>
-                <h1>Sign up</h1>
+                <h1 style={{fontSize:'30px'}}>Sign up</h1>
                 <div style={{width:'100%'}}>
                 <label id="lbl">Username: </label>
                 <input 

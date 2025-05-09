@@ -35,10 +35,10 @@ function Login() {
     <>
         <div className="lgn_container">
             
-            <img src="/3.png" width="220" style={{borderRadius:'12px'}}/>
+            <img src="/3.png" width="200px" style={{borderRadius:'12px'}}/>
            
             <div className='login_form'>
-                <h1>Login</h1>
+                <h1 style={{fontSize:'30px'}}>Login</h1>
 
                 
              
